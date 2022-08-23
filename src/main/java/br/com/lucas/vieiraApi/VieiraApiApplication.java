@@ -8,6 +8,7 @@ public class VieiraApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(VieiraApiApplication.class, args);
+		System.out.println("Successfully initialized API.");
 	}
 
 }
