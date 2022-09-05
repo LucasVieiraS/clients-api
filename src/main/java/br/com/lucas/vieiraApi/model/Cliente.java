@@ -1,6 +1,8 @@
 package br.com.lucas.vieiraApi.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -12,6 +14,9 @@ public class Cliente {
     private Long id;
 
     private String nome;
+
+    @OneToMany(mappedBy="id")
+    private List<Contato> contatos = new ArrayList<>();
 
     public String getNome() {
         return nome;
@@ -40,5 +45,13 @@ public class Cliente {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    public List<Contato> getContatos() {
+        return contatos;
+    }
+
+    public void setContatos(List<Contato> contatos) {
+        this.contatos = contatos;
     }
 }
