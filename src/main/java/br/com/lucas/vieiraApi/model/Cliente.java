@@ -15,7 +15,8 @@ public class Cliente {
 
     private String nome;
 
-    @OneToMany(mappedBy="id")
+    @ManyToOne
+    @JoinColumn(name="id")
     private List<Contato> contatos = new ArrayList<>();
 
     public String getNome() {
