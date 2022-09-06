@@ -15,7 +15,7 @@ public class Contato {
 
     @ManyToOne
     @JoinColumn(name = "id")
-    private Long idcliente;
+    private Cliente idcliente;
 
     private String descricao;
     private String contato;
@@ -26,30 +26,6 @@ public class Contato {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Long getIdcliente() {
-        return idcliente;
-    }
-
-    public void setIdcliente(Long idcliente) {
-        this.idcliente = idcliente;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public String getContato() {
-        return contato;
-    }
-
-    public void setContato(String contato) {
-        this.contato = contato;
     }
 
     @Override
