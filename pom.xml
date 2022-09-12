@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.lucas</groupId>
-	<artifactId>vieira-api</artifactId>
+	<artifactId>clients-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>vieira-api</name>
+	<name>clients-api</name>
 	<description>Spring Boot Project</description>
 	<properties>
 		<java.version>1.8</java.version>
