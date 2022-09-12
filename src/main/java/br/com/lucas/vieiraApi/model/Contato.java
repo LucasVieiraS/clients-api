@@ -1,7 +1,5 @@
 package br.com.lucas.vieiraApi.model;
 
-import com.sun.istack.NotNull;
-
 import javax.persistence.*;
 import java.util.Objects;
 
