@@ -1,6 +1,7 @@
-CREATE TABLE IF NOT EXISTS contato (
+CREATE TABLE IF NOT EXISTS Contato (
     id BIGINT NOT NULL AUTO_INCREMENT,
-    descricao VARCHAR(100),
-    contato VARCHAR(100),
+    cliente BIGINT NOT NULL,
+    descricao VARCHAR(255) NOT NULL,
+    contato VARCHAR(100) NOT NULL,
     PRIMARY KEY(ID)
 );
