@@ -10,22 +10,13 @@ import java.util.Objects;
 public class Cliente {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
     private String nome;
 
-    @OneToMany
-    @JoinColumn(name="id")
-    private List<Contato> contatos = new ArrayList<>();
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    @OneToMany(mappedBy = "cliente")
+    private List<Contato> contato = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -35,24 +26,32 @@ public class Cliente {
         this.id = id;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public List<Contato> getContato() {
+        return contato;
+    }
+
+    public void setContato(List<Contato> contato) {
+        this.contato = contato;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Cliente cliente = (Cliente) o;
-        return Objects.equals(id, cliente.id); //&& Objects.equals(nome, cliente.nome);
+        return id.equals(cliente.id);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(id);
-    }
-
-    public List<Contato> getContatos() {
-        return contatos;
-    }
-
-    public void setContatos(List<Contato> contatos) {
-        this.contatos = contatos;
     }
 }
